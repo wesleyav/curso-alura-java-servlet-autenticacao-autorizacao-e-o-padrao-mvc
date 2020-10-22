@@ -20,6 +20,6 @@ public class ListaEmpresas {
 		List<Empresa> lista = banco.getEmpresas();
 		request.setAttribute("empresas", lista);
 		
-		return "forward:listaEmpresas.jsp";
+		return "forward:/listaEmpresas.jsp";
 	}
 }
