@@ -23,15 +23,15 @@ public class Banco {
 
 		lista.add(empresa);
 		lista.add(empresa2);
-		
+
 		Usuario u1 = new Usuario();
 		u1.setLogin("nico");
 		u1.setSenha("123");
-		
+
 		Usuario u2 = new Usuario();
 		u2.setLogin("ana");
 		u2.setSenha("123");
-		
+
 		listaUsuarios.add(u1);
 		listaUsuarios.add(u2);
 	}
@@ -65,6 +65,17 @@ public class Banco {
 				return empresa;
 			}
 		}
+		return null;
+	}
+
+	public Usuario existeUsuario(String login, String senha) {
+
+		for(Usuario usuario : listaUsuarios) {
+			if(usuario.ehIgual(login, senha)) {
+				return usuario;
+			}
+		}
+		
 		return null;
 	}
 }
